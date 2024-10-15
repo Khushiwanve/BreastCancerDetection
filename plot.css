@@ -1,0 +1,38 @@
+// plot.js
+
+// Sample data for demonstration
+const data = {
+    labels: ['Benign', 'Malignant'],
+    datasets: [{
+        label: 'Breast Cancer Predictions',
+        data: [12, 5],  // Example data: 12 Benign, 5 Malignant
+        backgroundColor: [
+            'rgba(75, 192, 192, 0.6)',
+            'rgba(255, 99, 132, 0.6)',
+        ],
+        borderColor: [
+            'rgba(75, 192, 192, 1)',
+            'rgba(255, 99, 132, 1)',
+        ],
+        borderWidth: 1
+    }]
+};
+
+// Configuring the chart
+const config = {
+    type: 'bar', // You can change this to 'line', 'pie', etc.
+    data: data,
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+};
+
+// Rendering the chart
+const myChart = new Chart(
+    document.getElementById('myChart'),
+    config
+);
