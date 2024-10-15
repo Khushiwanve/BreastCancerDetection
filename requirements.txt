@@ -1,0 +1,7 @@
+Flask
+Flask-SQLAlchemy
+Flask-WTF
+Flask-Login
+scikit-learn
+matplotlib
+pandas
