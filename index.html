@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breast Cancer Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Static/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Breast Cancer Detection</h1>
+        <form action="/predict" method="POST">
+            <label for="mean_radius">Mean Radius:</label>
+            <input type="text" name="mean_radius" required>
+            <label for="mean_texture">Mean Texture:</label>
+            <input type="text" name="mean_texture" required>
+            <input type="submit" value="Predict">
+        </form>
+        <div class="graph-container">
+            <a href="/analysis">View Data Analysis</a>
+        </div>
+        <a href="/logout">Logout</a>
+    </div>
+</body>
+</html>
